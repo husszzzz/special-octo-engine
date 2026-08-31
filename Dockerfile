@@ -1,18 +1,17 @@
-# بيئة لينكس مع بايثون
-FROM python:3.10-slim
+# استخدام بيئة مستقرة ومتوافقة 100% مع أداة التوقيع
+FROM python:3.9-buster
 
-# تثبيت أدوات النظام المطلوبة بالإضافة لـ cmake
-RUN apt-get update && apt-get install -y git cmake g++ libssl-dev zip unzip curl
+# تثبيت الحزم وأدوات النظام الأساسية
+RUN apt-get update && apt-get install -y git g++ libssl-dev zip unzip curl make
 
-# بناء الأداة بنظام CMake (الطريقة الرسمية الجديدة)
+# جلب الأداة وبنائها باستخدام أمر make الرسمي
 RUN git clone https://github.com/zhlynn/zsign.git /zsign_src && \
     cd /zsign_src && \
-    mkdir build && cd build && \
-    cmake .. && make && \
+    make && \
     cp zsign /usr/local/bin/zsign && \
     chmod +x /usr/local/bin/zsign
 
-# تجهيز ملفات البوت
+# إعداد بيئة عمل البوت
 WORKDIR /app
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
