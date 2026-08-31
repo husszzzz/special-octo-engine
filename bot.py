@@ -7,7 +7,7 @@ import stat
 import requests
 
 # الإعدادات
-BOT_TOKEN = os.getenv("BOT_TOKEN", "ضع_توكن_البوت_هنا")
+BOT_TOKEN = os.getenv("BOT_TOKEN", "7709888774:AAFZHUqW4L8nysCutJ1PEQx2rIonYaEQd4s")
 IPA_URL = "https://github.com/husszzzz/8ball-pool/releases/download/1.5/8.Ball.Pool_56.26.1_1787089904.ipa"
 BASE_IPA = "8ball_base.ipa"
 
