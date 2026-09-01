@@ -6,7 +6,7 @@ import urllib.request
 import requests
 
 # الإعدادات (تأكد أن متغير BOT_TOKEN مضاف في إعدادات Railway)
-BOT_TOKEN = os.getenv("BOT_TOKEN", "7709888774:AAHPaqzFvGu7bGN0nls8pZgC5OFqbG1PLJ4")
+BOT_TOKEN = os.getenv("BOT_TOKEN", "7836799666:AAGYcwpEHYqfo1-jTufm4lZI_hvl2cUoDJE")
 IPA_URL = "https://github.com/husszzzz/8ball-pool/releases/download/1.5/8.Ball.Pool_56.26.1_1787089904.ipa"
 BASE_IPA = "8ball_base.ipa"
 
